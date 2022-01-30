@@ -11,6 +11,8 @@ let arrNum = num.toString().split('');
 let result =  arrNum.reduce(function(a, b) {
       return a * b
    })
+console.log(result);
+
 
 // результат в степень 3
 
