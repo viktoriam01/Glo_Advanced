@@ -7,7 +7,7 @@ const circleBtn = document.querySelector("#e_btn");
 const inputRange = document.querySelector("#range")
 const rangeSpan = document.querySelector("#range-span")
 const circle = document.querySelector("#circle")
-rangeSpan.textContent = inputRange.value + '%';
+// rangeSpan.textContent = inputRange.value + '%';
 
  
 
@@ -33,5 +33,5 @@ const logger = function(event) {
    circle.style.height = `${event.target.value}%`;
    
 }
-
+logger({target:inputRange})
 inputRange.addEventListener('input', logger);
