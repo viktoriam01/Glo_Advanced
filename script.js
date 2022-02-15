@@ -1,6 +1,7 @@
 'use strict';
 
 const btn = document.querySelector('#btn');
+const square = document.querySelector('#square');
 const inputColor = document.querySelector("#text");
 const circleBtn = document.querySelector("#e_btn");
 const inputRange = document.querySelector("#range")
@@ -11,10 +12,11 @@ console.log(btn);
 console.log(inputColor);
 
 
-// Изменить цвет кнопки
-const changeBtnColor  = function(e) {
-   e.target.style.backgroundColor = inputColor.value;
+// Изменить цвет квадрата
+const changeBtnColor  = function() {
+   square.style.backgroundColor = inputColor.value;
 }
+
 
 btn.addEventListener('click', changeBtnColor)
 
