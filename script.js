@@ -7,10 +7,9 @@ const circleBtn = document.querySelector("#e_btn");
 const inputRange = document.querySelector("#range")
 const rangeSpan = document.querySelector("#range-span")
 const circle = document.querySelector("#circle")
+rangeSpan.textContent = inputRange.value + '%';
 
-console.log(btn);
-console.log(inputColor);
-
+ 
 
 // Изменить цвет квадрата
 const changeBtnColor  = function() {
@@ -28,11 +27,11 @@ circleBtn.style.display = 'none';
 // Ползунок
 
 const logger = function(event) {
-   console.log(event.target.value);
-   rangeSpan.textContent = event.target.value;
+   
+   rangeSpan.textContent = event.target.value + '%';
    circle.style.width = `${event.target.value}%`;
    circle.style.height = `${event.target.value}%`;
+   
 }
 
 inputRange.addEventListener('input', logger);
-rangeSpan.addEventListener('change', logger);
