@@ -23,6 +23,8 @@ window.addEventListener('load', getLocalStorage)
 function render() {
    todoList.innerHTML = ''
    todoCompleted.innerHTML = ''
+   localStorage.setItem('toDoData', JSON.stringify(toDoData))
+
    toDoData.forEach(function(item, index) {
       const li = document.createElement('li')
       li.classList.add('todo-item')
@@ -34,12 +36,10 @@ function render() {
 
       if(item.completed) {
          todoCompleted.append(li)
-         localStorage.setItem('toDoData', JSON.stringify(toDoData))
-         
+                  
       } else {
          todoList.append(li)
-         localStorage.setItem('toDoData', JSON.stringify(toDoData))
-         
+                  
       }
    
       li.querySelector('.todo-complete').addEventListener('click', function() {
@@ -49,13 +49,11 @@ function render() {
 
       li.querySelector('.todo-remove').addEventListener('click', function() {
           toDoData.splice(index, 1)
-          render()
-         localStorage.setItem('toDoData', JSON.stringify(toDoData))
-            
+          render()                     
       }) 
-           
+     
    })
-
+   
 }
 
 todoControl.addEventListener('submit', function(event) {
