@@ -14,6 +14,7 @@ const first = new First()
 class Second extends First {
    
    helloSecond() {
+     super.hello()
      console.log('А я наследуемый метод');
    }
 
@@ -21,5 +22,5 @@ class Second extends First {
 
 const second = new Second()
 
-second.hello()
+
 second.helloSecond()
